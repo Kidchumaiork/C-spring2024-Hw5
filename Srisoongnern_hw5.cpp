@@ -62,33 +62,41 @@ public:
     void setGrammar(double g)
     {
         grammar = g;
-        calculatescore();
     }
     void setSpelling(double s)
     {
         spelling = s;
-        calculatescore();
     }
     void setCorrectLength(double cl)
     {
         correctLength = cl;
-        calculatescore();
     }
     void setContent(double c)
     {
         content = c;
-        calculatescore();
     }
 };
-1222222222222333333
 
-    int
-    main()
+int main()
 {
-    // Create an Essay object
-    Essay myEssay(28.0, 18.0, 17.0, 29.0);
+    double g;
+    double s;
+    double cl;
+    double c;
 
-    // Output the scores and letter grade
+    cout << "***Entering Essay Score***" << '\n';
+    cout << "--------------------------" << '\n';
+    cout << "Please enter Grammar score (0-100): ";
+    cin >> g;
+    cout << "Please enter spelling score (0-100): ";
+    cin >> s;
+    cout << "Please enter Correct Length score (0-100): ";
+    cin >> cl;
+    cout << "Please enter Content score (0-100): ";
+    cin >> c;
+
+    Essay myEssay(g, s, cl, c);
+
     cout << "Total Score: " << myEssay.getScore() << endl;
     cout << "Letter Grade: " << myEssay.getLetter() << endl;
 
